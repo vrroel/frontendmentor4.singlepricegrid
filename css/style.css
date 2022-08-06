@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(203, 44%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+.color-cyan{
+  color: var(--cyan);
+}
+
+.color-yellow{
+  color: var(--bright-yellow);
+}
+
+.color-gray{
+  color: var(--light-gray);
+}
+
+.color-grayish{
+  color: var(--grayish-blue);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  background: var(--light-gray);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.container {
+  /* margin: 10px; */
+  max-width: 635px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+div:not(.prices) {
+  padding: 2.5rem;
+}
+
+.intro {
+  grid-column: 1/-1;
+  background: #ffffff;
+  /* line-height: 2; */
+}
+
+.intro-title{
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text{
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro-desc{
+  line-height: 1.5;
+}
+
+.subs {
+  background: var(--cyan);
+}
+
+.subs-title,
+.benefits-title,
+.prices{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.benefits {
+  background: #4abebd;
+}
+
+.prices{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subs-price{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subs-time{
+  color: rgb(205, 218, 230);
+  font-size: 1rem;
+}
+
+.subs-desc{
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.btn{
+  background: var(--bright-yellow);
+  text-align: center;
+  padding: .8rem;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);
+}
+
+.benefits li:not(:last-child){
+  margin-bottom: 4px;
+}
+
+@media(max-width:700px){
+  body{
+    height: 100%;
+  }
+.container {
+  grid-template-columns: 1fr;
+  border-radius: initial;
+}
+
+
+div:not(.prices) {
+  padding: 1.8rem 1.5rem;
+}
+
+.intro-title{
+  font-size: 1.5rem;
+}
+
+.intro-text{
+  font-size: 1rem;
+}
+}
+
+
+
+/* 
+font-family: 'Karla', sans-serif;
+*/
